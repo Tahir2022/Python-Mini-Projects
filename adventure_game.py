@@ -19,6 +19,22 @@ if answer == "left":
 
 elif answer == "right":
     answer = input("You come to a bridge, it looks wobbly," \
-    "do you want to across it or")
+    "do you want to across it or head back (cross/back)? ")
+
+    if answer == "back":
+        print("YOu go back and lose.")
+    elif answer == "cross":
+        answer = input("You cross the bridge and meet a stranger." \
+        "Do you talk to them (yes/no)? ")
+
+        if answer == "yes":
+            print("You talkto the stranger and they give you gold." \
+            "You WIN! ")
+        elif answer == "no":
+            print("You ignore the stranger and they are offended and you lose.")
+        else:
+            print("Not a valid option. You lose.")
+    else:
+        print("Not a valid option. You lose.")
 else:
     print("Not valid option. You lose.")
